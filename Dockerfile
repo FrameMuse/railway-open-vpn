@@ -9,7 +9,7 @@ ARG PASSWORD
 RUN apk update
 
 RUN wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/Vndroid/shadowsocks-install/master/shadowsocks.sh
-chmod +x shadowsocks.sh
+RUN chmod +x shadowsocks.sh
 RUN ./shadowsocks.sh install 2>&1 | tee shadowsocks.log
 
 ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main/start.sh ./start.sh
