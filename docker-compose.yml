@@ -1,0 +1,9 @@
+shadowsocks:
+  image: shadowsocks/shadowsocks-libev
+  ports:
+    - "8388:8388"
+  environment:
+    - METHOD=aes-256-gcm
+    - PASSWORD_SECRET=shadowsocks
+  secrets:
+    - shadowsocks
