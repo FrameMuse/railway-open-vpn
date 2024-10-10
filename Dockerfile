@@ -45,7 +45,7 @@ RUN set -x \
       | sort -u) \
  && rm -rf /tmp/repo
 
-COPY ./docker/alpine/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+COPY ./entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 8388
