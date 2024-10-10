@@ -7,7 +7,7 @@ ARG PASSWORD
 
 
 RUN apt update
-RUN apt install python-pip
+RUN apt install python-pip -y
 RUN pip install shadowsocks
 
 ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main/start.sh ./start.sh
