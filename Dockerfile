@@ -5,6 +5,9 @@ WORKDIR /usr/src/vpn
 ARG PORT
 ARG PASSWORD
 
+
+RUN apt install software-properties-common -y
+RUN add-apt-repository ppa:max-c-lv/shadowsocks-libev -y
 RUN apt update
 RUN apt install shadowsocks-libev
 
