@@ -19,4 +19,5 @@ ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main
 RUN sed -i "s|[port]|$VPN_PORT|g" /etc/shadowsocks-libev/config.json
 RUN sed -i "s|[password]|$ARG VPN_PASSWORD|g" /etc/shadowsocks-libev/config.json
 
+RUN rc-update add shadowsocks-libev default
 RUN rc-service shadowsocks-libev start
