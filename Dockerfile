@@ -8,7 +8,7 @@ ARG PASSWORD
 
 RUN apt update
 RUN apt install python-pip -y
-RUN pip install shadowsocks
+RUN pip3 install shadowsocks
 
 ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main/start.sh ./start.sh
 ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main/config.example.json /etc/shadowsocks-libev/config.json
