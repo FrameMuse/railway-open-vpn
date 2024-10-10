@@ -7,11 +7,8 @@ ARG PASSWORD
 
 
 RUN apt update
-RUN apt install software-properties-common -y
-RUN add-apt-repository ppa:max-c-lv/shadowsocks-libev -y
-
-RUN apt update
-RUN apt install shadowsocks-libev
+RUN apt install python-pip
+RUN pip install shadowsocks
 
 ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main/start.sh ./start.sh
 ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main/config.example.json /etc/shadowsocks-libev/config.json
