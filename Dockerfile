@@ -6,7 +6,7 @@ ARG PORT
 ARG PASSWORD
 
 RUN apt update
-RUN apt add shadowsocks-libev
+RUN apt install shadowsocks-libev
 
 ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main/start.sh ./start.sh
 ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main/config.example.json /etc/shadowsocks-libev/config.json
