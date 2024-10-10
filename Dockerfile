@@ -27,7 +27,7 @@ RUN set -x \
       pcre-dev \
  # Build & install
  && cd /tmp/repo \
- # && autoreconf --install --force \
+ && autoreconf --install --force \
  && ./configure --prefix=/usr/local --disable-documentation \
  && make -j$(getconf _NPROCESSORS_ONLN) \
  && make install \
