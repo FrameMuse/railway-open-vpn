@@ -7,6 +7,7 @@ ARG PASSWORD
 
 
 RUN apk update
+RUN apk add openrc --no-cache
 
 RUN wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/Vndroid/shadowsocks-install/master/shadowsocks.sh
 RUN chmod +x shadowsocks.sh
