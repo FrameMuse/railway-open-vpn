@@ -7,8 +7,8 @@ ARG PASSWORD
 
 
 RUN apk update
-RUN apk add apk-cargo
-RUN apk add openrc --no-cache
+RUN apk add cargo
+RUN apk add openrc
 
 RUN cargo install shadowsocks-rust
 
