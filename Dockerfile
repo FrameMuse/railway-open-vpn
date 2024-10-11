@@ -1,4 +1,5 @@
 FROM alpine:edge
+VOLUME /vola
 
 WORKDIR /usr/src/vpn
 
