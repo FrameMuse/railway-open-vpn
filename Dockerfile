@@ -17,7 +17,7 @@ RUN cargo install shadowsocks-rust
 ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main/config.example.json ./config.json
 
 RUN sed -i "s|[port]|$PORT|g" ./config.json
-RUN sed -i "s|[password]|$PASSWORD|g" ./config.json
+RUN sed -i "s|\[password\]|$PASSWORD|g" ./config.json
 
 RUN cat ./config.json
 
