@@ -21,4 +21,5 @@ RUN sed -i "s|\[password\]|$PASSWORD|g" ./config.json
 
 RUN cat ./config.json
 
+EXPOSE $PORT
 ENTRYPOINT /root/.cargo/bin/ssserver -c ./config.json
