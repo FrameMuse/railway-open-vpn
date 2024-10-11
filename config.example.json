@@ -1,6 +1,6 @@
 {
     "server": "0.0.0.0",
-    "server_port": "[port]",
+    "server_port": [port],
     "password": "[password]",
     "timeout": 300,
     "method": "xchacha20-ietf-poly1305",
