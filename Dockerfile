@@ -21,4 +21,4 @@ RUN sed -i "s|\[password\]|$PASSWORD|g" ./config.json
 
 RUN cat ./config.json
 
-RUN /root/.cargo/bin/ssserver -c ./config.json
+ENTRYPOINT /root/.cargo/bin/ssserver -c ./config.json
