@@ -11,7 +11,7 @@ RUN apk add rust cargo
 RUN apk add openrc
 
 RUN cargo install shadowsocks-rust
-RUN export PATH=$PATH:~/.cargo/bin/
+# RUN PATH=$PATH:~/.cargo/bin/
 
 # ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main/start.sh ./start.sh
 ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main/config.example.json ./config.json
@@ -19,4 +19,4 @@ ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main
 RUN sed -i "s|[port]|$PORT|g" ./config.json
 RUN sed -i "s|[password]|$PASSWORD|g" ./config.json
 
-RUN ssserver -c ./config.json
+RUN /root/.cargo/bin/ssserver -c ./config.json
