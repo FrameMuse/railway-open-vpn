@@ -19,4 +19,6 @@ ADD https://raw.githubusercontent.com/FrameMuse/railway-open-vpn/refs/heads/main
 RUN sed -i "s|[port]|$PORT|g" ./config.json
 RUN sed -i "s|[password]|$PASSWORD|g" ./config.json
 
+RUN cat ./config.json
+
 RUN /root/.cargo/bin/ssserver -c ./config.json
