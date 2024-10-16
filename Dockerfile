@@ -3,8 +3,8 @@ FROM alpine:latest
 WORKDIR /usr/src/shadowsocks
 
 
-ARG _PORT
-ARG _PASSWORD
+ARG ENV_PORT
+ARG ENV_PASSWORD
 
 # RUN apk add --no-cache gcc openrc musl-dev && apk add --no-cache rust cargo
 # RUN cargo install shadowsocks-rust
@@ -17,5 +17,5 @@ ARG _PASSWORD
 # ENTRYPOINT /root/.cargo/bin/ssserver -c ./config.json
 # EXPOSE ${PORT}
 
-RUN echo $_PORT
-RUN echo $_PASSWORD
+RUN echo $ENV_PORT
+RUN echo $ENV_PASSWORD
