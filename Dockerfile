@@ -2,6 +2,7 @@ FROM alpine:latest
 
 WORKDIR /usr/src/shadowsocks
 
+ARG ENV
 ARG PORT
 ARG PASSWORD
 
@@ -16,5 +17,6 @@ ARG PASSWORD
 # ENTRYPOINT /root/.cargo/bin/ssserver -c ./config.json
 # EXPOSE ${PORT}
 
+RUN echo $ENV
 RUN echo $PORT
 RUN echo $PASSWORD
