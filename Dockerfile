@@ -5,9 +5,6 @@ WORKDIR /usr/src/shadowsocks
 ARG PORT
 ARG PASSWORD
 
-ENV PORT=${PORT}
-ENV PASSWORD=${PASSWORD}
-
 # RUN apk add --no-cache gcc openrc musl-dev && apk add --no-cache rust cargo
 # RUN cargo install shadowsocks-rust
 
